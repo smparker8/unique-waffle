@@ -11,12 +11,64 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
         rel="stylesheet">
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <link rel="stylesheet" href="src/style.css">
     <title>Weather Application</title>
 </head>
 
 <body>
-    <h1></h1>
+    <div class="container">
+        <div class="wrapper">
+            <div class="weather-application">
+                <form id="search-form">
+                    <div class="row">
+                        <div class="col-9">
+                            <input class="form-control" type="search" id="city-input" placeholder="Search city..."
+                                autocomplete="off">
+                        </div>
+                        <div class="col-3">
+                            <input type="submit" value="Search" class="btn btn-primary w-100">
+                        </div>
+                    </div>
+                </form>
+
+                <div class="dailyOverview">
+                    <h1 id="city">City</h1>
+                    <ul>
+                        <li>Last updated: <span id="date">Date</span></li>
+                        <li id="city-weather-description">City Weather Description</li>
+                    </ul>
+                </div>
+
+                <div class="row">
+                    <div class="col-6">
+                        <div class="d-flex weather-temperature">
+                            <img src="" alt="weather-icon" id="weather-icon" />
+                            <div>
+                                <strong id="temperature">19</strong><span class="units"><a href="#" id="celsius-link"
+                                        class="active">°C</a> |
+                                    <a href="#" id="fahrenheit-link">°F</a></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <ul>
+                            <li>Humidity: <span id="humidity"></span>%</li>
+                            <li>Wind: <span id="wind"></span> mph</li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+
+            <p class="footer">
+                <a href="https://github.com/smparker8/unique-waffle" target="_blank" class="gitLink">Open-source
+                    code</a> by
+                <span class="coderName">Parker</span>
+            </p>
+
+        </div>
+    </div>
 </body>
 <script src="src/index.js"></script>
 
